@@ -2,21 +2,19 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.cache.annotation.EnableCaching;
 
-@EnableResourceServer
-@SpringBootApplication
+//@EnableResourceServer
+@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
+@EnableCaching
 public class DemoApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(DemoApplication.class, args);
   }
 
-  @Bean
+  /*@Bean
   public CorsFilter corsFilter() {
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     CorsConfiguration config = new CorsConfiguration();
@@ -30,5 +28,5 @@ public class DemoApplication {
     config.addAllowedMethod("DELETE");
     source.registerCorsConfiguration("/**", config);
     return new CorsFilter(source);
-  }
+  }*/
 }

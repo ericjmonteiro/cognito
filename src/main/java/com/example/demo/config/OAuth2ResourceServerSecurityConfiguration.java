@@ -12,8 +12,8 @@ import org.springframework.security.oauth2.provider.token.store.jwk.JwkTokenStor
 
 import com.example.demo.converter.CognitoAccessTokenConverter;
 
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableWebSecurity
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class OAuth2ResourceServerSecurityConfiguration extends ResourceServerConfigurerAdapter  {
 
   private final ResourceServerProperties resource;

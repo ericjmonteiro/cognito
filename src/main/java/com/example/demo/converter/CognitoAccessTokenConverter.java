@@ -6,7 +6,7 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class CognitoAccessTokenConverter extends JwtAccessTokenConverter {
   private static final String COGNITO_GROUPS = "cognito:groups";
   private static final String SPRING_AUTHORITIES = "authorities";
